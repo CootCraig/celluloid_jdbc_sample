@@ -9,11 +9,7 @@ Sequel.extension :migration
 
 Java::org.postgresql.Driver
 
-DB = Sequel.connect('jdbc:postgresql://localhost/celluloid_jdb_sample?user=craig&password=banana')
+DB = Sequel.connect('jdbc:postgresql://localhost/celluloid_jdb_sample?user=aaa&password=aaa')
 
 Sequel::Migrator.apply(DB,'./migrate')
 
-# craig@virt-ubu-1:/opt/gcsww.com/cvlan_logger_2/db$ jruby --debug migration_runner.rb
-# Sequel::DatabaseError: Java::ComMicrosoftSqlserverJdbc::SQLServerException: Column or parameter #3: Cannot find data type UUID.
-# UNIQUEIDENTIFIER
-#
