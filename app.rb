@@ -8,10 +8,11 @@ require 'sequel'
 
 Java::org.postgresql.Driver
 
-DB = Sequel.connect('jdbc:postgresql://localhost/celluloid_jdb_sample?user=aaaa&password=bbb')
+DB = Sequel.connect('jdbc:postgresql://localhost/celluloid_jdb_sample?user=aaa&password=bbb')
 
 class Message < Sequel::Model(:messages)
 end
+Message.plugin :timestamps, :create=>:sequel_insert_at
 
 class MessageWriter
   include Celluloid
