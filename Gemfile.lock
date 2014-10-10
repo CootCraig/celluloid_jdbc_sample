@@ -3,8 +3,11 @@ GEM
   specs:
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    hitimes (1.2.2)
     hitimes (1.2.2-java)
     sequel (4.15.0)
+    sequel_postgresql_triggers (1.0.7)
+      sequel
     timers (4.0.1)
       hitimes
 
@@ -14,3 +17,4 @@ PLATFORMS
 DEPENDENCIES
   celluloid
   sequel
+  sequel_postgresql_triggers
