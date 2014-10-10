@@ -9,7 +9,8 @@ Sequel.extension :migration
 
 Java::org.postgresql.Driver
 
-DB = Sequel.connect('jdbc:postgresql://localhost/celluloid_jdb_sample?user=aaa&password=bbb')
+connection_string = File.read('../pg_connection.txt').strip
+DB = Sequel.connect(connection_string)
 
 Sequel::Migrator.apply(DB,'./migrate')
 
